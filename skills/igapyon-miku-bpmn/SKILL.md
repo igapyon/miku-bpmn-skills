@@ -9,6 +9,10 @@ Use BPMN as the reference for process terminology and structure. A reusable Proc
 
 Use `igapyon-miku-daybook` to locate and read miku-daybook activities and related tasks, and to record run outcomes in activities. This companion skill is a required premise because activities provide work history, related tasks provide job context, and activities record run outcomes.
 
+## Record work for later process discovery
+
+When the user plans to use upcoming work for process discovery, enable Detailed Activity Mode through `igapyon-miku-daybook` before the work begins. For each meaningful group of actions, record the inputs used, actions taken, decisions and their reasons, results, and artifacts passed to the next step in an activity.
+
 ## Discover and define a process
 
 1. Read the miku-daybook activities selected by the user and any related tasks. Use activities to identify the work actually done, its order, decision points, and results. Distinguish work observed in an activity from proposals recorded there. Use task records for the job's purpose, completion conditions, and reported progress or remaining work. Identify plans and status from task records as such, and label any inferences made during discovery.
