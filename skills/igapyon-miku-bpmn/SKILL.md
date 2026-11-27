@@ -1,17 +1,19 @@
 ---
 name: igapyon-miku-bpmn
-description: Discover reusable processes from miku-daybook activities, define them using BPMN concepts, and assemble or run a parent Process that calls user-selected processes in order. Use when the user asks to discover, define, assemble, or run a miku-bpmn process, or explicitly invokes this skill.
+description: Discover reusable processes from miku-daybook activities and related tasks, define them using BPMN concepts, and assemble or run a parent Process that calls user-selected processes in order. Use when the user asks to discover, define, assemble, or run a miku-bpmn process, or explicitly invokes this skill.
 ---
 
 # miku-bpmn
 
 Use BPMN as the reference for process terminology and structure. A reusable Process defines a unit of work. A larger Process can invoke reusable processes through Call Activities. A User Task represents a decision assigned to a person.
 
+Use `igapyon-miku-daybook` to locate and read miku-daybook activities and related tasks, and to record run outcomes in activities. This companion skill is a required premise because activities provide work history, related tasks provide job context, and activities record run outcomes.
+
 ## Discover and define a process
 
-1. Read the miku-daybook activities selected by the user. Identify the work actually done, its order, decision points, and results. Distinguish observations from suggestions in the source and inferences made during discovery.
-2. Present a reusable process candidate with its purpose, required inputs, tasks, decision criteria, outputs, and completion conditions. Link the candidate to the relevant activity and identify the evidence for any inferred step. If several activities describe the same work, show shared steps and meaningful differences.
-3. Save a definition when the user asks to save it or adopts the candidate as a definition. Preserve existing task IDs when editing. In a new draft, use one Markdown file per process unless the user has specified another format. When including BPMN XML, put it in one labeled XML code block and refer to its task IDs from the written instructions. Use the BPMN model for ordering and branching and the instructions for task behavior. Ask for clarification if they conflict.
+1. Read the miku-daybook activities selected by the user and any related tasks. Use activities to identify the work actually done, its order, decision points, and results. Distinguish work observed in an activity from proposals recorded there. Use task records for the job's purpose, completion conditions, and reported progress or remaining work. Identify plans and status from task records as such, and label any inferences made during discovery.
+2. Present a reusable process candidate in the conversation with its purpose, required inputs, tasks, decision criteria, outputs, and completion conditions. Link to the supporting activities and any related tasks used, and identify the evidence for any inferred step. If several activities describe the same work, show shared steps and meaningful differences.
+3. Save a definition when the user asks to save it or adopts the candidate as a definition. When the project and daybook roots are separate, omit links and paths to daybook records from the saved definition and other project-facing text. Record the link to the saved definition in the daybook activity using the daybook workflow. Preserve existing task IDs when editing. In a new draft, use one Markdown file per process unless the user has specified another format. When including BPMN XML, put it in one labeled XML code block and refer to its task IDs from the written instructions. Use the BPMN model for ordering and branching and the instructions for task behavior. Ask for clarification if they conflict.
 
 ## Assemble and present a parent Process
 
