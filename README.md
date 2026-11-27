@@ -38,7 +38,7 @@ Codexから `$igapyon-miku-bpmn` を呼び出します。たとえば「この a
 ## 開発
 
 - [SKILL.md](skills/igapyon-miku-bpmn/SKILL.md) がスキル本体です。開発中の初稿で、単体CLIを持たない Skill-only 製品として始めます。
-- [TODO.md](TODO.md) に初版の残項目を記録します。初回リリースの予定版は `0.2.0`、対応するタグは `v0.2.0` です。
+- [TODO.md](TODO.md) に初版の残項目を記録します。初回リリースの予定版は `0.3.0`、対応するタグは `v0.3.0` です。
 - `workplace/` はローカルの作業用です。Gitには `workplace/.gitkeep` を登録します。ローカルに配置した `.codex/skills/` と macOS の `.DS_Store` もGitの対象外です。
 - [miku-soft の共通開発資料](docs/miku-soft-reference.md) を参照できます。
 
