@@ -18,6 +18,11 @@
 
 たとえば親の Process が「共有メモを作る」なら、「決定事項を抽出する」→「共有用に整える」という2つの Process を順に呼び出します。
 
+## 同梱例
+
+- [P00001 — Agent Skill の新規作成](skills/igapyon-miku-bpmn/examples/process-mining/P00001/README.md) は、Skill の構想から初稿レビューまでを題材にします。対応する親・子の BPMN 定義も同梱しています。
+- [P00002 — miku-bpmn の GitHub Release](skills/igapyon-miku-bpmn/examples/process-mining/P00002/README.md) は、version increment と commit、Draft PR、human review / merge、Release 公開、sync pull を題材にします。人の UI 操作と miku-scm の検証結果を区別します。
+
 ### 後からプロセス発見に使う作業の記録
 
 後から miku-bpmn でプロセス発見の対象にする予定の作業は、開始時から miku-daybook の **Detailed Activity Mode** で記録します。作業の順序や工程間のつながりを後からたどれるよう、意味のある作業のまとまりごとに、使用した入力、実施した操作、判断とその理由、得られた結果、次の工程に渡した成果物を activity に残します。
@@ -42,7 +47,7 @@ Codexから `$igapyon-miku-bpmn` を呼び出します。たとえば「この a
 ## 開発
 
 - [SKILL.md](skills/igapyon-miku-bpmn/SKILL.md) がスキル本体です。開発中の初稿で、単体CLIを持たない Skill-only 製品として始めます。
-- [TODO.md](TODO.md) に初版の残項目を記録します。リポジトリのバージョンは [package.json](package.json) を正本とし、対応するタグは `v<version>` とします。現在の予定版は `0.4.2` です。
+- [TODO.md](TODO.md) に初版の残項目を記録します。リポジトリのバージョンは [package.json](package.json) を正本とし、対応するタグは `v<version>` とします。現在の公開版は `0.4.2`（タグ `v0.4.2`）です。
 - `npm run build:bundle:zip` で `README.md`、`LICENSE`、`skills/igapyon-miku-bpmn/` を含む `bundle/igapyon-miku-bpmn-skills-<version>.zip` を作成します。`v<version>` の GitHub Release を公開すると、Actions がタグと `package.json` の版を照合して ZIP を作り、Release に添付します。
 - `workplace/` はローカルの作業用です。Gitには `workplace/.gitkeep` を登録します。ローカルに配置した `.codex/skills/` と macOS の `.DS_Store` もGitの対象外です。
 - [miku-soft の共通開発資料](docs/miku-soft-reference.md) を参照できます。
