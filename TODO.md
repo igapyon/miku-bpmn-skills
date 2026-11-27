@@ -12,6 +12,7 @@
 
 ## 初版で確かめること
 
+- [ ] **別の題材でプロセス発見を試す。** Agent Skill の新規作成とは性質の異なる activity を1件選び、[同梱の5本のプロンプト](skills/igapyon-miku-bpmn/examples/process-mining/P00001/README.md) をそのまま適用する。工程の分け方と Process 候補の切り出し方を見直し、両方の題材で使えた判断基準を `skills/igapyon-miku-bpmn/references/process-mining.md` の初稿にまとめる。
 - [ ] activityから2つの再利用可能な Process を見つけて保存し、利用者が指定した順で呼び出す親の Process を組み立てる。生成AIがその順に実行し、人への質問を1回挟んで再開し、実施結果をactivityに戻せるか確認する。
 
 ## 開発メモ
