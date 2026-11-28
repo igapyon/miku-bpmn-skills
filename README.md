@@ -47,7 +47,7 @@ Codexから `$igapyon-miku-bpmn` を呼び出します。たとえば「この a
 ## 開発
 
 - [SKILL.md](skills/igapyon-miku-bpmn/SKILL.md) がスキル本体です。開発中の初稿で、単体CLIを持たない Skill-only 製品として始めます。
-- [TODO.md](TODO.md) に初版の残項目を記録します。リポジトリのバージョンは [package.json](package.json) を正本とし、対応するタグは `v<version>` とします。現在の公開版は `0.4.2`（タグ `v0.4.2`）です。
+- [TODO.md](TODO.md) に初版の残項目を記録します。リポジトリのバージョンは [package.json](package.json) を正本とし、対応するタグは `v<version>` とします。今回の公開対象は `0.4.4`（タグ `v0.4.4`）です。
 - `npm run build:bundle:zip` で `README.md`、`LICENSE`、`skills/igapyon-miku-bpmn/` を含む `bundle/igapyon-miku-bpmn-skills-<version>.zip` を作成します。`v<version>` の GitHub Release を公開すると、Actions がタグと `package.json` の版を照合して ZIP を作り、Release に添付します。
 - `workplace/` はローカルの作業用です。Gitには `workplace/.gitkeep` を登録します。ローカルに配置した `.codex/skills/` と macOS の `.DS_Store` もGitの対象外です。
 - [miku-soft の共通開発資料](docs/miku-soft-reference.md) を参照できます。

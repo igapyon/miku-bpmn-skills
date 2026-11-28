@@ -12,6 +12,6 @@
 | C02 Draft PR を公開する | commit 済みの変更、目的、base、リモート、利用者の push 依頼 | 固定 evidence を準備し、diff から一度だけ draft を作り、draft を検証して sync push（E05–E06） | push 済み branch、backup、open Draft PR。PR の URL を review 担当者へ渡す。成功後の local `-done` branch は凍結。 |
 | C03 Draft PR を review して merge する | Draft PR の URL、head / base、review 権限 | 人が Ready for Review、マージ、公開ブランチの扱いを決める（E08）。対象 PR のマージ結果と SHA を確認する工程を加える（E09 をもとにした追加案）。 | 対象 PR と確認済みの merge commit SHA。 |
 | C04 GitHub Release を作成して公開する | 確認済みの版、タグの規約、対象 PR、merge commit SHA | 人が Draft a new release を選び、tag を作成して Release を publish（E08）。 | Release と `v<version>` tag。今回、tag ref は remote 確認済みだが Release page / asset は独立照合していない。 |
-| C05 merge を検証して次の work branch を作る | 凍結した `-done` ブランチ、対象 PR、base、利用者の pull 依頼 | miku-scm sync pull が exact PR merge を検証し、shared base 上の次 branch を作る（E09）。今回は pull 後に remote tag ref を補足確認した（E10）。 | `origin/devel` を追跡する clean な次 work branch。merge の証拠と backup を保持。 |
+| C05 merge を検証して次の work branch を作る | 凍結した `-done` ブランチ、対象 PR、base、利用者の pull 依頼 | `igapyon-miku-scm` の `repository.sync.pull` で対象 PR のマージを検証し、shared base 上に次のブランチを作る（E09）。今回は pull 後に remote tag ref を補足確認した（E10）。 | `origin/devel` を追跡する clean な次 work branch。merge の証拠と backup を保持。 |
 
 [P00002 の案内に戻る](README.md) · [次へ — 候補と原記録の照合](PM0002-00004-review.md)
